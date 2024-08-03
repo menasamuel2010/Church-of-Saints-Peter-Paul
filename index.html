@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html lang="ar">
@@ -12,9 +13,11 @@
 
 </head>        
 <body>
+    
     </div>
 
     <div class="top-bar">
+        
 
         <div class="social-media">
             <a href="https://web.facebook.com/groups/332492051629992/?_rdc=1&_rdr" target="_blank">
@@ -22,18 +25,232 @@
                 <div class="social-media">
                     <a href="https://www.youtube.com/@PeterAndPoul/videos" target="_blank">
                         <img src="https://i.top4top.io/p_3119pmzxm2.png" alt="">
+                        
 
                 </a>
                 
-            </head>        
+            </head> 
+            
+            
+            
             <body>
+
+
+                
             </div>
+            
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+
+    
         
        
         @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+
+
+
+        
+        .navbar {
+            background-color: #800000;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .register-button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .register-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .navbar {
+            background-color: #800000;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .register-button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .register-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+
+        body.light-mode {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        body.dark-mode {
+            background-color: #333;
+            color: #f8f9fa;
+        }
+        .navbar {
+            background-color: #800000;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            background-color: #111;
+            color: white;
+            padding-top: 60px;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        .sidebar.show {
+            transform: translateX(0);
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        footer {
+            background: #1f1f1f;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+            font-size: 0.875rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        footer a {
+            color: #3ad1ff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+
+        body {
+            font-family: 'Amiri', serif; /* تأكد من استخدام الخط المناسب */
+        }
+        .top-bar {
+            /* تنسيقات الشريط العلوي */
+        }
+        .social-media {
+            /* تنسيقات مواقع التواصل الاجتماعي */
+        }
+        #homepageSection {
+            position: relative;
+        }
+        #welcomeMessage {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #800000; /* تأكد من أن اللون المستخدم هنا يناسب تصميم الموقع */
+        }
+        .main-image {
+            width: 100%;
+            height: auto;
+        }
+
+
+        footer a:hover {
+            color: #1e90ff;
+        }
+        .toggle-btn, .theme-toggle {
+            background-color: #800000;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .toggle-btn {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+        }
+        .theme-switch-wrapper {
+            display: flex;
+            align-items: center;
+        }
+        .theme-switch {
+            display: none;
+        }
+        .theme-switch-label {
+            background-color: #111;
+            border: 2px solid #fff;
+            border-radius: 30px;
+            cursor: pointer;
+            height: 30px;
+            position: relative;
+            width: 60px;
+        }
+        .theme-switch-label:before {
+            background-color: #fff;
+            border-radius: 50%;
+            content: '';
+            height: 26px;
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            width: 26px;
+            transition: transform 0.3s ease;
+        }
+        .theme-switch:checked + .theme-switch-label:before {
+            transform: translateX(30px);
+        }
+        .theme-switch-label .icon {
+            font-size: 12px;
+            height: 100%;
+            line-height: 26px;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            width: 26px;
+        }
+        .theme-switch-label .icon-sun {
+            left: 1px;
+        }
+        .theme-switch-label .icon-moon {
+            right: 1px;
+        }
 
         .top-bar {
     display: flex;
@@ -64,6 +281,7 @@
     height: 30px;
     vertical-align: middle;
 }
+
 
 
         body {
@@ -150,6 +368,40 @@
         }
 
 
+        body.light-mode {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        body.dark-mode {
+            background-color: #333;
+            color: #f8f9fa;
+        }
+
+        .navbar {
+            background-color: #800000;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .toggle-btn,
+        .theme-toggle {
+            background-color: #800000;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+        }
+
+
         body {
 
             font-family: 'Amiri', serif;
@@ -168,6 +420,302 @@
             background-color: #000000;
             color: #f8f9fa;
         }
+
+
+        body {
+    font-family: 'Amiri', serif;
+}
+
+body.light-mode {
+    background-color: #f8f9fa;
+    color: #000000;
+}
+
+body.dark-mode {
+    background-color: #000000;
+    color: #f8f9fa;
+}
+
+.navbar {
+    background-color: #800000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar .site-name {
+    font-size: 1.5em;
+}
+
+.fathers-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+}
+
+.fathers-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fathers-section .father {
+    text-align: center;
+    margin: 20px;
+}
+
+.fathers-section .father img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.fathers-section .father .name {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.toggle-btn,
+.theme-toggle {
+    background-color: #800000;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.toggle-btn {
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #111;
+    color: white;
+    padding-top: 60px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.sidebar.show {
+    transform: translateX(0);
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+.container {
+    max-width: 600px;
+    margin-top: 50px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: #800000;
+    border: none;
+}
+
+footer {
+    background: #1f1f1f;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    font-size: 0.875rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+footer a {
+    color: #3ad1ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #1e90ff;
+}
+
+
+
+#homepageSection {
+    display: none;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.main-content img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+}
+
+.about-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-section img {
+    max-width: 500px; /* Increase this value as needed */
+    border-radius: 15px;
+}
+
+.about-section .text {
+    max-width: 500px;
+    margin-left: 20px;
+    font-size: 1.5em; /* Increase this value as needed */
+}
+
+.fathers-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+}
+
+.fathers-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.father-card {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.father-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.father-card p {
+    margin-top: 10px;
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch {
+    display: none;
+}
+
+.theme-switch-label {
+    background-color: #111;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    height: 30px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch-label:before {
+    background-color: #fff;
+    border-radius: 50%;
+    content: '';
+    height: 26px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 26px;
+    transition: transform 0.3s ease;
+}
+
+.theme-switch:checked+.theme-switch-label:before {
+    transform: translateX(30px);
+}
+
+.about-section .text {
+    max-width: 500px;
+    margin-left: 20px;
+    font-size: 1.5em; /* Increase this value as needed */
+}
+
+
+.theme-switch-label .icon {
+    font-size: 12px;
+    height: 100%;
+    line-height: 26px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 26px;
+}
+
+.theme-switch-label .icon-sun {
+    left: 1px;
+}
+
+.theme-switch-label .icon-moon {
+    right: 1px;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+}
+
+.contact-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 
         .navbar {
@@ -274,27 +822,7 @@
 }
 
 
-
-        .sidebar {
-
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 250px;
-            background-color: #111;
-            color: white;
-            padding-top: 60px;
-            transform: translateX(-100%);
-            transition: transform 0.3s ease;
-        }
-
-
-        .sidebar.show {
-
-            transform: translateX(0);
-        }
-
+        
 
         .sidebar a {
 
@@ -355,16 +883,21 @@ footer a:hover {
 
 
 
-        #loginSection {
-
-            display: none;
-        }
-
+        
 
         #homepageSection {
 
             display: none;
         }
+
+.main-content img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+
 
 
         .main-content {
@@ -541,10 +1074,7 @@ footer a:hover {
         }
 
 
-        #loginSection {
-
-            display: none;
-        }
+        
 
 
         #homepageSection {
@@ -580,7 +1110,7 @@ footer a:hover {
 
         .about-section img {
 
-            max-width: 300px;
+            max-width: 600px;
             border-radius: 15px;
         }
 
@@ -635,104 +1165,38 @@ footer a:hover {
 
 
     </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <button id="loginButton" class="register-button">تسجيل الدخول</button>
+        </div>
+        <script>
+            document.getElementById('loginButton').addEventListener('click', function() {
+                window.location.href = 'login.html';
+            });
+        </script>
+
     
-    
-    
-
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
-    <script type="text/javascript">
-
-        (function() {
-
-            emailjs.init("KFcDDDbzgR5zRrCM3");
-
-        })();
+        
 
     </script>
 
+    
 <script>
 
     document.addEventListener("DOMContentLoaded", function() {
-        const loginForm = document.getElementById("loginForm");
-        const loginSection = document.getElementById("loginSection");
-        const homepageSection = document.getElementById("homepageSection");
-        const usernameSpan = document.getElementById("username");
+    
+    
 
-
-        loginForm.addEventListener("submit", function(e) {
-
-            e.preventDefault();
-
-
-            const formData = new FormData(loginForm);
-            const firstName = formData.get("firstName");
-            const lastName = formData.get("lastName");
-            const email = formData.get("email");
-            const phone = formData.get("phone");
-
-
-            const emailParams = {
-
-                to_email: "menasamo2010@gmail.com",
-                from_email: email,
-                firstName: firstName,
-                lastName: lastName,
-                phone: phone
-
-            };
-
-
-            emailjs.send("service_z2bjkzk", "template_tu63ek3", emailParams)
-
-                .then(function(response) {
-                    console.log("SUCCESS!", response.status, response.text);
-
-                }, function(error) {
-                    console.log("FAILED...", error);
-                });
-
-
-            localStorage.setItem("firstName", firstName);
-            localStorage.setItem("lastName", lastName);
-            localStorage.setItem("email", email);
-
-
-
-            usernameSpan.textContent = `${firstName} ${lastName}`;
-
-
-            loginSection.style.display = "none";
-
-            homepageSection.style.display = "block";
         });
 
 
-        const firstName = localStorage.getItem("firstName");
-        const lastName = localStorage.getItem("lastName");
-
-
-
-        if (firstName && lastName) {
-            usernameSpan.textContent = `${firstName} ${lastName}`;
-            loginSection.style.display = "none";
-            homepageSection.style.display = "block";
-
-        } else {
-
-            loginSection.style.display = "block";
-            homepageSection.style.display = "none";
-        }
 
 
         const toggleBtn = document.querySelector('.toggle-btn');
 
         const sidebar = document.querySelector('.sidebar');
 
-
-        toggleBtn.addEventListener('click', function() {
-            sidebar.classList.toggle('show');
-        });
 
 
         const themeSwitch = document.getElementById("theme-switch");
@@ -752,9 +1216,32 @@ footer a:hover {
 
         });
 
-    });
+    
 
 
+</script>
+
+
+
+<script>
+    function toggleTheme() {
+        document.body.classList.toggle('dark-mode');
+        document.body.classList.toggle('light-mode');
+
+        // حفظ المظهر المختار في التخزين المحلي
+        let theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+        localStorage.setItem('theme', theme);
+    }
+
+    // التحقق من المظهر المحفوظ عند تحميل الصفحة
+    window.onload = function() {
+        let savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.body.classList.add(savedTheme === 'dark' ? 'dark-mode' : 'light-mode');
+        } else {
+            document.body.classList.add('light-mode');
+        }
+    }
 </script>
 
 
@@ -762,29 +1249,17 @@ footer a:hover {
 
 <body class="light-mode">
 
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init("user_PGtztibZ6P4HIegi4");
-        })();
+
     </script>
 </head>
 <body>
 
 
-    <body class="light-mode">
+    
         <div id="loginSection" class="container">
-            <h2 class="text-center">مرحبا بكم في كنيسه القديس‍ين بطرس و بولس بشبين الكوم</h2>
-            <h2 class="text-center">تسجيل الدخول</h2>
-            <form id="loginForm">
+           
                 
-                <input type="text" name="firstName" class="form-control" placeholder="الاسم الأول" required>
-                <input type="text" name="lastName" class="form-control" placeholder="الاسم الأخير" required>
-                <input type="email" name="email" class="form-control" placeholder="البريد الإلكتروني" required>
-                <input type="text" name="phone" class="form-control" placeholder="رقم الهاتف" required>
-                <input type="password" name="password" class="form-control" placeholder="كلمة المرور" required>
-                <input type="password" name="confirmPassword" class="form-control" placeholder="تأكيد كلمة المرور" required>
-                <button type="submit" class="btn btn-primary btn-block">تسجيل الدخول</button>
+                
             </section>
            
             </form>
@@ -802,61 +1277,62 @@ footer a:hover {
     </div>
         
  </section>
-    <section id="homepageSection">
-        <nav class="navbar navbar-expand-lg">
-            <div class="theme-switch-wrapper">
-                <input type="checkbox" id="theme-switch" class="theme-switch">
-                <label for="theme-switch" class="theme-switch-label">
-                    <span class="icon icon-sun"></span>
-                    <span class="icon icon-moon"></span>
-
+ 
+ <nav class="navbar navbar-expand-lg">
+    <div class="theme-switch-wrapper">
+        <input type="checkbox" id="theme-switch" class="theme-switch">
+        <label for="theme-switch" class="theme-switch-label">
+            <span class="icon icon-sun"></span>
+            <span class="icon icon-moon"></span>
+              
+ 
+ 
                 </label>
 
                 <span class="site-name">كنيسة القديسين بطرس وبولس</span>
-
             </div>
-
             <button class="toggle-btn">☰</button>
 
         </nav>
 
-   
-        
-        <div class="sidebar">
-            <a href="index.html">الصفحة الرئيسية</a>
-            <a href="enjeel.html">الإنجيل المقدس</a>
-            <a href="https://orsozox.org/Agpeya/Agpeya-ar.htm">الأجبية</a>
-            <a href="khulagi.html">الخلاجي</a>
-            <a href="https://zm-coptic.com/holybible/katamars.php">القطمارس</a>
-            <a href="chat.html">الشات</a>
-        </div>
         
         
-
-        </div>
-
+        
+        
         <div class="main-content">
-            <h1>سلام يا <span id="userFirstName"></span> <span id="userLastName"></span></h1>
-            <img src="https://l.top4top.io/p_3120ya5co1.png" alt="صورة الكنيسة" class="img-fluid">
-
+            <img src="https://l.top4top.io/p_3120ya5co1.png" alt="صورة الكنيسة" class="img-fluid main-image">
+            <h1>  <span id="userFirstName"></span> <span id="userLastName"></span></h1>
+            <div id="welcomeMessage" class="text-center" style="display: none; margin-top: 20px;">
+                <h2>ازيك يا <span id="userName"></span></h2>
+                
         </div>
-
-            <div class="about-section" id="aboutSection">
-                <img src="https://i.top4top.io/p_31174uq1f1.png" alt="About Image">
-                <div class="text">
+        
+        <div class="about-section" id="aboutSection">
+            <img src="https://i.top4top.io/p_31174uq1f1.png" alt="About Image">
+            <div class="text">
                     <h2>عن الكنيسة</h2>
                     <p>تعد كنيسة القديسين بطرس وبولس هي الكنيسة الثالثة بعد كنستي الشهيد مار جرجس والأخرى السيدة العذراء مريم التابعين لايبارشية كرسي المنوفية و كانت تتبع طائفة الأقباط الكاثوليك و في عام 2007 تم شراء الكنيسة و تدشينها بيد صاحب النيافة الحبر الجليل الأنبا بنيامين وتعرضت الكنيسة بحريق هائل يوم الأربعاء الموافق تسعة من شهر سبتمبر عام ألفين و تسعه 2009/09/9 الساعة الثالثة ظهرا كان هناك فى هذا اليوم قداس انتهى الساعة الحادية عشر صباحا و قد زعم البعض انه ماس كهربى او شمعة هى التى سببت هذا الحريق الهائل الذى سبب خسائر فادحة و هي 11 تكييف، 3 تلفزيونات، 15 مقعد، 4 مقصورات خاصة بأجساد القديسين و الله حفظ أجساد القديسين و لم يحدث اي شئ في اي جسد من أجساد القديسين و قدرت هذه الخسائر بمائة ألف جنيه قد أثبت أنه ليس ماس كهربى لان لوحة المفاتيح كانت مغلقة وسليمة تماما وكان الخادم المسئول عن حماية الكنيسة جدا فى أعماله ولا يوجد ايضا اى شمعة يوم الاربعاء يوجد الشمع فقط يومي الأحد والجمعة فالحريق لم يتم بشمعة أو ماس كهربى و تم تجديد الكنيسة  بالكامل والان يتم بناء كنيسة أخرى تابعة لهذه الكنيسة</p>
                     </div>
 
             </div>
 
+            <div class="sidebar">
+                <a href="index.html">الصفحة الرئيسية</a>
+                <a href="enjeel.html">الإنجيل المقدس</a>
+                <a href="https://orsozox.org/Agpeya/Agpeya-ar.htm">الأجبية</a>
+                <a href="khulagi.html">الخلاجي</a>
+                <a href="https://zm-coptic.com/holybible/katamars.php">القطمارس</a>
+                <a href="chat.html">الشات</a>
+            </div>
 
           <div class="fathers-section" id="fathersSection">
             <div class="text">
             </div>
             <h2>اباء الكنيسه</h2>
             
+        </script>
 
+        
 
                 <div class="father-card">
                     <img src="https://f.top4top.io/p_31176600c1.jpg" alt="Father 1">
@@ -907,14 +1383,27 @@ footer a:hover {
 
     <footer>
         <p>&copy;جميع الحقوق محفوظه لكنسه القديسين بطرس و بولس بشبين الكوم</p>
-        <p>تصميم وتطوير بواسطة <a href="https://www.misatechnoly.online/designer" target="_blank">Mina Samuel</a></p>
-        <p>مع شركه<a href="https://www.misatechnoly.online" target="_blank">MISA Technolgy</a></p>
+        <p>تصميم وتطوير بواسطة <a href="https://www.misatechnoly.online" target="_blank">Mina Samuel</a></p>
     </footer>
+    
     
     
 </script>
 
 <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+            if (localStorage.getItem('isLoggedIn') === 'true') {
+                const firstName = localStorage.getItem('userFirstName');
+                const lastName = localStorage.getItem('userLastName');
+                const welcomeMessage = `أزيك يا ${firstName} ${lastName}`;
+                
+                document.getElementById('welcomeMessage').innerText = welcomeMessage;
+                document.getElementById('welcomeMessage').style.display = 'block';
+                document.getElementById('homepageSection').style.display = 'block';
+            }
+        });
+
     document.addEventListener("DOMContentLoaded", function() {
         const sections = document.querySelectorAll('.about-section, .fathers-section, .donation-section, .contact-section');
 
@@ -937,103 +1426,12 @@ footer a:hover {
 </script>
 
 
+
+
+
     <script>
 
-        document.addEventListener("DOMContentLoaded", function() {
-            const loginForm = document.getElementById("loginForm");
-            const loginSection = document.getElementById("loginSection");
-            const homepageSection = document.getElementById("homepageSection");
-            const usernameSpan = document.getElementById("username");
-
     
-            loginForm.addEventListener("submit", function(e) {
-                e.preventDefault();
-
-    
-                const formData = new FormData(loginForm);
-                const firstName = formData.get("firstName");
-                const lastName = formData.get("lastName");
-                const email = formData.get("email");
-                const phone = formData.get("phone");
-    
-
-                const emailParams = {
-                    to_email: "specified_email@example.com",
-                    from_email: email,
-                    firstName: firstName,
-                    lastName: lastName,
-                    phone: phone
-                };
-
-    
-                emailjs.send("service_zuwciwm", "template_tu63ek3", emailParams)
-                    .then(function(response) {
-                        console.log("SUCCESS!", response.status, response.text);
-                    }, function(error) {
-                        console.log("FAILED...", error);
-                    });
-
-    
-                localStorage.setItem("firstName", firstName);
-                localStorage.setItem("lastName", lastName);
-                localStorage.setItem("email", email);
-
-    
-                usernameSpan.textContent = `${firstName} ${lastName}`;
-
-    
-                loginSection.style.display = "none";
-                homepageSection.style.display = "block";
-
-            });
-    
-
-            const firstName = localStorage.getItem("firstName");
-            const lastName = localStorage.getItem("lastName");
-    
-
-            if (firstName && lastName) {
-                usernameSpan.textContent = `${firstName} ${lastName}`;
-                loginSection.style.display = "none";
-                homepageSection.style.display = "block";
-
-            } else {
-
-                loginSection.style.display = "block";
-                homepageSection.style.display = "none";
-
-            }
-    
-
-            const toggleBtn = document.querySelector('.toggle-btn');
-            const sidebar = document.querySelector('.sidebar');
-    
-
-            toggleBtn.addEventListener('click', function() {
-                sidebar.classList.toggle('show');
-            });
-
-    
-            const themeSwitch = document.getElementById("theme-switch");
-            const body = document.body;
-    
-
-            themeSwitch.addEventListener("change", function() {
-
-                if (themeSwitch.checked) {
-                    body.classList.remove("light-mode");
-                    body.classList.add("dark-mode");
-
-                } else {
-
-                    body.classList.remove("dark-mode");
-
-                    body.classList.add("light-mode");
-                }
-
-            });
-
-        });
 
     </script>
     
@@ -1043,16 +1441,14 @@ footer a:hover {
 
 
         document.addEventListener("DOMContentLoaded", function() {
-            const sections = document.querySelectorAll('.about-section, .fathers-section, .donation-section');
-    
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('show');
-                    } else {
-                        entry.target.classList.remove('show');
-                    }
-                });
+            var user = localStorage.getItem('user');
+            if (user) {
+                document.getElementById('loginButton').style.display = 'none';
+                var userData = JSON.parse(user);
+                document.getElementById('userName').textContent = userData.firstName + " " + userData.lastName;
+                document.getElementById('welcomeMessage').style.display = 'block';
+            }
+        
             }, {
                 threshold: 0.1
             });
@@ -1061,21 +1457,24 @@ footer a:hover {
                 observer.observe(section);
             });
 
-        });
+        
 
     </script>
     
-
     <script>
         
 
 
-        const loginForm = document.getElementById("loginForm");
-        const loginSection = document.getElementById("loginSection");
-        const homepageSection = document.getElementById("homepageSection");
-        const aboutSection = document.getElementById("aboutSection");
-        const fathersSection = document.getElementById("fathersSection");
-        const themeSwitch = document.getElementById("theme-switch");
+        
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (localStorage.getItem('isLoggedIn') === 'true') {
+                document.getElementById('loginButton').style.display = 'none';
+                document.getElementById('homepageSection').style.display = 'block';
+            }
+        });
+    
+
 
 
         const user = JSON.parse(localStorage.getItem("user"));
@@ -1083,97 +1482,29 @@ footer a:hover {
 
         if (user) {
 
-            loginSection.style.display = "none";
+           
             homepageSection.style.display = "block";
-            document.getElementById("userFirstName").textContent = user.firstName;
-            document.getElementById("userLastName").textContent = user.lastName;
-
+           
         } else {
 
-            loginSection.style.display = "block";
+            
         }
 
 
-        loginForm.addEventListener("submit", (e) => {
-            e.preventDefault();
-            const formData = new FormData(loginForm);
-            const user = {
-                firstName: formData.get("firstName"),
-                lastName: formData.get("lastName"),
-                email: formData.get("email"),
-                phone: formData.get("phone"),
-
-            };
-
-            localStorage.setItem("user", JSON.stringify(user));
-            loginSection.style.display = "none";
-            homepageSection.style.display = "block";
-            document.getElementById("userFirstName").textContent = user.firstName;
-            document.getElementById("userLastName").textContent = user.lastName;
-
-
-           
-            emailjs.send("service_zuwciwm", "template_tu63ek3", {
-                firstName: user.firstName,
-                lastName: user.lastName,
-                email: user.email,
-                phone: user.phone,
-
-            });
-
-        });
-
 
         document.addEventListener("DOMContentLoaded", function() {
-    const loginForm = document.getElementById("loginForm");
-    const loginSection = document.getElementById("loginSection");
-    const homepageSection = document.getElementById("homepageSection");
-    const userFirstNameSpan = document.getElementById("userFirstName");
-    const userLastNameSpan = document.getElementById("userLastName");
-
-
-    loginForm.addEventListener("submit", function(e) {
-        e.preventDefault();
-
-
-        const formData = new FormData(loginForm);
-        const firstName = formData.get("firstName");
-        const lastName = formData.get("lastName");
-
-
-        localStorage.setItem("firstName", firstName);
-        localStorage.setItem("lastName", lastName);
-
-
-        userFirstNameSpan.textContent = firstName;
-        userLastNameSpan.textContent = lastName;
-
-
-        loginSection.style.display = "none";
-        homepageSection.style.display = "block";
-
-    });
-
-
-    const firstName = localStorage.getItem("firstName");
-    const lastName = localStorage.getItem("lastName");
-
-
-
-    if (firstName && lastName) {
-        userFirstNameSpan.textContent = firstName;
-        userLastNameSpan.textContent = lastName;
-        loginSection.style.display = "none";
-        homepageSection.style.display = "block";
-
-    } else {
-
-        loginSection.style.display = "block";
-        homepageSection.style.display = "none";
-
-    }
+   
+    
 
 });
+
+        
+
+        document.querySelector(".theme-switch").addEventListener("change", function () {
+            document.body.classList.toggle("dark-mode");
+            document.body.classList.toggle("light-mode");
+        });
+
 
 
         document.querySelector(".toggle-btn").addEventListener("click", () => {
@@ -1203,6 +1534,24 @@ footer a:hover {
         });
 
 
+ // عند الضغط على صورة تسجيل الدخول
+ $('#loginImage').click(function() {
+                window.location.href = 'login.html';
+            });
+
+            // تحميل الجزء العلوي من الصفحة
+            $('.about-section').addClass('show');
+
+            // تفعيل وإلغاء تفعيل الوضع الليلي
+            $('#theme-switch').change(function() {
+                if ($(this).is(':checked')) {
+                    $('body').removeClass('light-mode').addClass('dark-mode');
+                } else {
+                    $('body').removeClass('dark-mode').addClass('light-mode');
+                }
+            });
+
+
         themeSwitch.addEventListener("change", () => {
             document.body.classList.toggle("dark-mode");
             document.body.classList.toggle("light-mode");
@@ -1212,6 +1561,10 @@ footer a:hover {
 
         document.addEventListener('click', function(event) {
         const sidebar = document.querySelector('.sidebar');
+
+
+    
+
         const toggleBtn = document.querySelector('.toggle-btn');
         if (!sidebar.contains(event.target) && !toggleBtn.contains(event.target)) {
             sidebar.classList.remove('show');
@@ -1220,73 +1573,36 @@ footer a:hover {
     });
 
 
-    usernameSpan.textContent = `${firstName} ${lastName}`;
-    usernameSpan.textContent = `${firstName} ${lastName}`;
+    
 
 
-loginSection.style.display = "none";
 homepageSection.style.display = "block";
 
 
 
-localStorage.setItem("firstName", firstName);
-localStorage.setItem("lastName", lastName);
 
 
-const firstName = localStorage.getItem("firstName");
-const lastName = localStorage.getItem("lastName");
+
+document.getElementById('loginButton').addEventListener('click', function() {
+            window.location.href = 'login.html';
+        });
+
+        window.onload = function() {
+            let firstName = localStorage.getItem('userFirstName');
+            let lastName = localStorage.getItem('userLastName');
+            if (firstName && lastName) {
+                document.getElementById('loginButton').style.display = 'none';
+                document.getElementById('userName').textContent = firstName + ' ' + lastName;
+                document.getElementById('welcomeMessage').style.display = 'block';
+            }
+        };
 
 
-if (firstName && lastName) {
-    usernameSpan.textContent = `${firstName} ${lastName}`;
-    loginSection.style.display = "none";
-    homepageSection.style.display = "block";
-
-} else {
-
-    loginSection.style.display = "block";
-    homepageSection.style.display = "none";
-}
 
 
-if (firstName && lastName) {
-usernameSpan.textContent = `${firstName} ${lastName}`;
-loginSection.style.display = "none";
-homepageSection.style.display = "block";
-} else {
-loginSection.style.display = "block";
-homepageSection.style.display = "none";
-}
+    </script>
 
 
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-                event.preventDefault();
-                const formData = new FormData(event.target);
-                const data = {
-                    firstName: formData.get('firstName'),
-                    lastName: formData.get('lastName'),
-                    email: formData.get('email'),
-                    phone: formData.get('phone'),
-                    password: formData.get('password')
-                };
-                localStorage.setItem('user', JSON.stringify(data));
-                localStorage.setItem('loggedIn', 'true');
-
-                emailjs.send('service_9i8t5gm', 'template_a7u5pge', {
-                    from_name: data.firstName + ' ' + data.lastName,
-                    email: data.email,
-                    phone: data.phone
-                }).then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                }, function(error) {
-                    console.log('FAILED...', error);
-                });
-
-                document.getElementById('loginSection').style.display = 'none';
-                document.getElementById('homepageSection').style.display = 'block';
-                document.getElementById('userFirstName').textContent = data.firstName;
-                document.getElementById('userLastName').textContent = data.lastName;
-            });
         
     </script>
 
