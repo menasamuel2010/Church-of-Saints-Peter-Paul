@@ -245,7 +245,12 @@
             top: 0;
             width: 26px;
         }
-        
+        .theme-switch-label .icon-sun {
+            left: 1px;
+        }
+        .theme-switch-label .icon-moon {
+            right: 1px;
+        }
 
         .top-bar {
     display: flex;
@@ -306,12 +311,26 @@
         }
 
 
-        .about-section img {
+        .about-church {
+    text-align: center;
+    padding: 20px;
+}
 
-            max-width: 400px;
-            border-radius: 15px;
-        }
+.church-image {
+    width: 100%;
+    height: auto;
+    max-width: 800px; /* الحد الأقصى للعرض على شاشات الكمبيوتر */
+}
 
+@media (max-width: 768px) {
+    .church-image {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+}
+ 
+        
 
         .about-section .text {
 
@@ -487,7 +506,7 @@ body.dark-mode {
 .toggle-btn {
     position: relative;
     top: 0;
-    
+    right: 0;
 }
 
 .theme-toggle {
@@ -948,18 +967,24 @@ footer a:hover {
         }
 
 
-        .about-section img {
+        .about-church {
+    text-align: center;
+    padding: 20px;
+}
 
-            max-width: 400px;
-            border-radius: 15px;
-        }
+.church-image {
+    width: 100%;
+    height: auto;
+    max-width: 800px; /* الحد الأقصى للعرض على شاشات الكمبيوتر */
+}
 
-
-        .about-section .text {
-
-            max-width: 800px;
-            
-        }
+@media (max-width: 768px) {
+    .church-image {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+}
 
 
         .theme-switch-wrapper {
@@ -1095,33 +1120,25 @@ footer a:hover {
         }
 
 
-        .church-image {
-    width: 100%;
-    height: auto;
-    max-width: 800px; /* الحد الأقصى للعرض على شاشات الكمبيوتر */
-    margin-bottom: 20px;
-}
+        .about-section.show {
 
-.church-description {
-    max-width: 800px;
-}
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-/* نسخة الهواتف المحمولة */
-@media (max-width: 768px) {
-    .about-church {
-        padding: 10px;
-    }
 
-    .church-image {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        margin-bottom: 10px;
-    }
+        .about-section img {
 
-    .church-description {
-        padding: 0 10px;
-    }
+            max-width: 350px;
+            border-radius: 15px;
+        }
+
+
+        .about-section .text {
+
+            max-width: 800px;
+           
+        }
 
 
         .fathers-section {
@@ -1196,11 +1213,11 @@ footer a:hover {
             }
             #aboutImageContainer {
                 flex: 1;
-               
+                margin-right: 20px;
             }
             #aboutContent {
                 flex: 1;
-                
+                text-align: right;
                 margin-top: 0;
             }
         }
@@ -1438,13 +1455,13 @@ footer a:hover {
 
                 <div class="father-card">
                     <img src="https://h.top4top.io/p_3117udz293.jpg" alt="Father 3">
-                    <p>القس برناباس نادي</p>
+                    <p>القس برنباس نادي</p>
 
                 </div>
 
                 <div class="father-card">
                     <img src="https://k.top4top.io/p_3117fq6t12.png" alt="Father 4">
-                    <p> القس ياكوبوس صبري</p>
+                    <p>القس ياكوبوس</p>
 
                 </div>
 
