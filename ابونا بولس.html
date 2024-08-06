@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معلومات الكاهن</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Amiri', serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            margin-top: 50px;
+            max-width: 800px;
+        }
+
+        .priest-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .priest-info img {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .priest-info .text {
+            font-size: 1.2em;
+        }
+
+        @media(min-width: 768px) {
+            .priest-info {
+                flex-direction: row;
+                text-align: left;
+            }
+
+            .priest-info img {
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #800000;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .top-bar a:hover {
+            color: #007BFF;
+        }
+
+        .navbar {
+            background-color: #800000;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="index.html">الرجوع</a>
+        <a >القمص بولس حنا</a>
+       
+    </div>
+
+    <div class="container">
+        <div class="priest-info">
+            <img src="https://f.top4top.io/p_31176600c1.jpg" alt="صورة الكاهن">
+            <div class="text">
+                <h2>القمص بولس حنا</h2>
+                <p>معلومات .</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
