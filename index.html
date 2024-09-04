@@ -796,6 +796,7 @@ body.dark-mode {
 
 
 
+
 .sidebar {
     position: fixed;
     top: 0;
@@ -1264,6 +1265,77 @@ footer a:hover {
     }
 }
 
+.news-grid {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 300%; /* عرض الشبكة بنسبة 200% لتستوعب بطاقتين في كل سلايد */
+}
+
+.news-card {
+    flex: 0 0 100%; /* عرض البطاقة يكون 50% من السلايدر */
+    box-sizing: border-box;
+}
+
+.news-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.slide-btn:hover {
+    background-color: rgba(128, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+.prev-btn::before,
+.next-btn::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+}
+
+.prev-btn::before {
+    transform: rotate(-135deg);
+}
+
+.next-btn::before {
+    transform: rotate(45deg);
+}
+
+.prev-btn {
+    left: 20px; /* الزر في أقصى اليسار */
+}
+
+.next-btn {
+    right: 20px; /* الزر في أقصى اليمين */
+}
+
+.news-card {
+    flex: 0 0 50%; /* عرض البطاقة 50% من عرض السلايدر لعرض بطاقتين فقط */
+    box-sizing: border-box;
+}
 
 
         .navbar {
@@ -2142,52 +2214,47 @@ footer a:hover {
 
               
               
-              <!-- قسم أخبار الكنيسة -->
-<section id="church-news" class="church-news-section">
-    <div class="container">
-        <h2 class="section-title">أخبار الكنيسة</h2>
-        <div class="news-grid">
-            <!-- بطاقة الخبر الأول -->
-            <div class="news-card">
-                <div class="news-image">
-                    <img src="https://l.top4top.io/p_3168rruqk1.jpg" alt="عنوان الخبر الأول">
+              <section id="church-news" class="church-news-section">
+                <div class="container">
+                    <h2 class="section-title">أخبار الكنيسة</h2>
+                    <div class="news-slider">
+                        <div class="news-grid">
+                            <!-- بطاقة الخبر الأول -->
+                            <div class="news-card">
+                                <div class="news-image">
+                                    <img src="https://l.top4top.io/p_3168rruqk1.jpg" alt="عنوان الخبر الأول">
+                                </div>
+                                <div class="news-content">
+                                    <h3 class="news-title">مشاركه الكنيسه في مهرجان الكرازه 2024</h3>
+                                    <p class="news-excerpt">
+                                        مشاركه الكنيسه في فرع المسرحيه ...
+                                    </p>
+                                    <button class="read-more-btn" onclick="showModal('مشاركه الكنيسه في فرع المسرحيه اخراج عماد فاروق و اخراج نبيل عبد الساتر و تاليف نفين ظريف', '.')">اقرأ المزيد</button>
+                                </div>
+                            </div>
+                            <!-- بطاقة الخبر الثاني -->
+                            <div class="news-card">
+                                <div class="news-image">
+                                    <img src="https://c.top4top.io/p_3168cd8941.jpg" alt="">
+                                </div>
+                                <div class="news-content">
+                                    <h3 class="news-title">مشاركه الكنيسه في مهرجان الكرازه 2024</h3>
+                                    <p class="news-excerpt">
+                                        مشاركه الكنيسه في فرع الكورال ...
+                                    </p>
+                                    <button class="read-more-btn" onclick="showModal('مشاركه الكنيسه في فرع الكورال تحت اشراف اخ مايكل عادل و تاسوني هبه زاهر و تاسوني ليليان مجدي')">اقرأ المزيد</button>
+                                </div>
+                            </div>
+                            <!-- بطاقة الخبر الثالث -->
+                            
+                            </div>
+                        </div>
+                        <button class="slide-btn prev-btn">&#10094;</button>
+                        <button class="slide-btn next-btn">&#10095;</button>
+                    </div>
                 </div>
-                <div class="news-content">
-                    <h3 class="news-title">مشاركه الكنيسه في مهرجان الكرازه 2024</h3>
-                    <p class="news-excerpt">
-                    مشاركه الكنيسه في فرع المسرحيه ...
-                    </p>
-                    <button class="read-more-btn" onclick="showModal('مشاركه الكنيسه في فرع المسرحيه اخراج عماد فاروق و اخراج نبيل عبد الساتر و تاليف نفين ظريف', '.')">اقرأ المزيد</button>
-                </div>
-            </div>
-            <!-- بطاقة الخبر الثاني -->
-            <div class="news-card">
-                <div class="news-image">
-                    <img src="https://c.top4top.io/p_3168cd8941.jpg" alt="">
-                </div>
-                <div class="news-content">
-                    <h3 class="news-title">مشاركه الكنيسه في مهرجان الكرازه 2024</h3>
-                    <p class="news-excerpt">
-مشاركه الكنيسه في فرع الكورال ...
-                    </p>
-                    <button class="read-more-btn" onclick="showModal('مشاركه الكنيسه في فرع الكورال تحت اشراف اخ مايكل عادل و تاسوني هبه زاهر و تاسوني ليليان مجدي')">اقرأ المزيد</button>
-                </div>
-            </div>
-            <!-- بطاقة الخبر الثالث -->
-            <div class="news-card">
-                <div class="news-image">
-                    <img src="path-to-your-image3.jpg" alt="عنوان الخبر الثالث">
-                </div>
-                <div class="news-content">
-                    <h3 class="news-title">عنوان الخبر الثالث</h3>
-                    <p class="news-excerpt">
-                        هذا نص مختصر يصف محتوى الخبر الثالث بشكل جذاب وموجز لجذب انتباه الزوار ويدفعهم لقراءة المزيد.
-                    </p>
-                    <button class="read-more-btn" onclick="showModal('عنوان الخبر الثالث', 'هذا هو النص الكامل للخبر الثالث. يمكن أن يحتوي على تفاصيل أكثر حول الخبر.')">اقرأ المزيد</button>
-                </div>
-            </div>
-            <!-- يمكنك إضافة المزيد من بطاقات الأخبار بنفس الطريقة -->
-        </div>
+            </section>
+            
     </div>
 </section>
 
@@ -2368,7 +2435,45 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <script>
 
-    
+document.addEventListener("DOMContentLoaded", function() {
+    const newsGrid = document.querySelector('.news-grid');
+    const newsCards = document.querySelectorAll('.news-card');
+    const nextBtn = document.querySelector('.next-btn');
+    const prevBtn = document.querySelector('.prev-btn');
+    let currentIndex = 0;
+    const slideWidth = newsCards[0].offsetWidth * 1; // عرض بطاقتين معًا
+    const totalSlides = Math.ceil(newsCards.length / 0.7); // حساب عدد السلايدات
+
+    function updateSlidePosition() {
+        newsGrid.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
+
+    function nextSlide() {
+        if (currentIndex < totalSlides - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0;
+        }
+        updateSlidePosition();
+    }
+
+    function prevSlide() {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = totalSlides - 1;
+        }
+        updateSlidePosition();
+    }
+
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    setInterval(nextSlide, 5000); // تغير السلايد تلقائيًا كل 5 ثواني
+});
+
+
+
 
     </script>
     <script>
