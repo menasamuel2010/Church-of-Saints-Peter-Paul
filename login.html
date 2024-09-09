@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>كنيسة القديسين بطرس وبولس</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="123.icon">
     <style>
         body {
             background-color: #f8f9fa;
@@ -41,23 +42,27 @@
 </head>
 <body>
     <div class="container">
-        <h2 class="text-center">تسجيل الدخول</h2>
-        <form id="loginForm">
-            <input type="text" class="form-control" placeholder="الاسم الأول" required>
-            <input type="text" class="form-control" placeholder="الاسم الأخير" required>
-            <input type="email" class="form-control" placeholder="البريد الإلكتروني" required>
-            <input type="text" class="form-control" placeholder="الهاتف" required>
+        <h2 class="text-center">سجل معنا الان في كنيسه القديسين بطرس و بولس بشبين الكوم</h2>
+        <form id="loginForm" autocomplete="on">
+            <input type="text" class="form-control" placeholder="الاسم الأول" name="firstName" autocomplete="given-name" required>
+            <input type="text" class="form-control" placeholder="الاسم الأخير" name="lastName" autocomplete="family-name" required>
+            <input type="email" class="form-control" placeholder="البريد الإلكتروني" name="email" autocomplete="email" required> 
+            
+        
+            <input type="text" class="form-control" id="phone" value="+20" name="phone" autocomplete="tel-national" required pattern="\+20[0-9]{10}">
+
             <div class="password-container">
-                <input type="password" class="form-control" id="password" placeholder="كلمة المرور" required>
+                <input type="password" class="form-control" id="password" placeholder="كلمة المرور" name="password" autocomplete="new-password" required>
                 <span class="toggle-password">🔒</span>
             </div>
             <div class="password-container">
-                <input type="password" class="form-control" id="confirmPassword" placeholder="تأكيد كلمة المرور" required>
+                <input type="password" class="form-control" id="confirmPassword" placeholder="تأكيد كلمة المرور" autocomplete="new-password" required>
                 <span class="toggle-password">🔒</span>
             </div>
             <button type="submit" class="btn btn-primary btn-block">تسجيل</button>
         </form>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
         // Function to toggle password visibility
@@ -73,12 +78,38 @@
             }
         });
 
+        // تثبيت +20 في حقل الهاتف
+        const phoneInput = document.getElementById('phone');
+
+        // عند التركيز على الحقل، اجعل المؤشر بعد +20 مباشرة
+        phoneInput.addEventListener('focus', function() {
+            if (this.value === '') {
+                this.value = '+20';
+            }
+        });
+
+        // منع المستخدم من مسح +20
+        phoneInput.addEventListener('input', function() {
+            if (!this.value.startsWith('+20')) {
+                this.value = '+20';
+            }
+        });
+
+        // منع الكتابة قبل +20
+        phoneInput.addEventListener('keydown', function(e) {
+            const cursorPosition = this.selectionStart;
+            if (cursorPosition < 3 && (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight' && e.key !== 'Tab')) {
+                e.preventDefault();
+            }
+        });
+
         $('#loginForm').on('submit', function(e) {
             e.preventDefault();
             let formData = {
                 firstName: $('input[placeholder="الاسم الأول"]').val(),
                 lastName: $('input[placeholder="الاسم الأخير"]').val(),
                 email: $('input[placeholder="البريد الإلكتروني"]').val(),
+                phone: $('input[placeholder="الهاتف"]').val(),
                 password: $('#password').val(),
                 confirmPassword: $('#confirmPassword').val(),
             };
@@ -94,13 +125,15 @@
                 alert('كلمة المرور وتأكيد كلمة المرور غير متطابقتين.');
                 return;
             }
-
+            
             emailjs.send('service_zuwciwm', 'template_tu63ek3', {
-                to_email: formData.email,
+                
                 firstName: formData.firstName,
                 lastName: formData.lastName,
+                email: formData.email,
+                phone: formData.phone,
                 password: formData.password,
-                confirmPassword: formData.confirmPassword
+                confirmPassword: formData.confirmPassword 
             }).then(function(response) {
                
                 localStorage.setItem('userFirstName', formData.firstName);
@@ -114,3 +147,4 @@
     </script>
 </body>
 </html>
+

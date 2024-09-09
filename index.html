@@ -7,9 +7,11 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>كنيسة القديسين بطرس وبولس</title>
+    <link rel="icon" href="123.icon">
 </head>
-<!-- نافذة منبثقة لعرض محتوى الخبر -->
+
 <div id="newsModal" class="modal">
     <div class="modal-content">
       <span class="close-btn">&times;</span>
@@ -50,7 +52,6 @@
     </div>
 
     <div class="top-bar">
-        
 
         <div class="social-media">
             <a href="https://web.facebook.com/groups/332492051629992/?_rdc=1&_rdr" target="_blank">
@@ -73,7 +74,7 @@
             </div>
             
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
+    
     <style>
 
     
@@ -252,7 +253,7 @@
 
 .news-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
     z-index: 2;
 }
@@ -459,7 +460,7 @@
             margin-top: 50px;
             opacity: 0;
             transform: translateY(50px);
-            transition: opacity 1s, transform 1s;
+            transition: opacity 5s, transform 5s;
         }
 
 
@@ -676,6 +677,45 @@ body.light-mode {
     background-color: #f8f9fa;
     color: #000000;
 }
+
+.main-image {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    transition: background-image 1s ease-in-out; /* لإضافة تأثير ناعم عند تغيير الصورة */
+}
+
+/* تطبيق صورة مختلفة للأجهزة ذات العرض الأقل من 768 بكسل */
+@media only screen and (max-width: 500px) {
+    .main-image {
+        background-image: url('https://l.top4top.io/p_3120ya5co1.png'); /* صورة الهاتف */
+        height: 50vh; /* اجعل ارتفاع الصورة يغطي الشاشة بالكامل */
+    }
+}
+
+/* تعديل للصورة في نسخة الهاتف */
+@media only screen and (max-width: 768px) {
+    .main-image {
+        background-size: cover;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+        background-position: center;
+    }
+}
+
+/* تعديل للصورة في نسخة الهاتف */
+@media only screen and (max-width: 768px) {
+    .main-image {
+        background-size: contain;
+        height: 200px;
+        background-position: center;
+    }
+}
+
 
 body.dark-mode {
     background-color: #000000;
@@ -958,7 +998,7 @@ footer a:hover {
     margin-top: 50px;
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 1s, transform 1s;
+    transition: opacity 5s, transform 5s;
 }
 
 .church-news-section {
@@ -979,7 +1019,7 @@ footer a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* طبقة شفافة فوق الصورة لتحسين قراءة النص */
+    background: rgba(0, 0, 0, 0.6); /* طبقة شفافة فوق الصورة لتحسين قراءة النص */
     z-index: -1;
 }
 
@@ -1005,7 +1045,7 @@ footer a:hover {
 
 /* تنسيقات قسم أخبار الكنيسة */
 .church-news-section {
-    padding: 60px 0;
+    padding: 100px 0;
     background-color: #000000;
 }
 
@@ -1031,7 +1071,7 @@ footer a:hover {
 
 .church-news-section .news-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
 }
 
@@ -1131,11 +1171,53 @@ footer a:hover {
     margin-bottom: 20px;
 }
 
+/* تعديل للصورة في نسخة الهاتف */
 @media only screen and (max-width: 768px) {
     .main-image {
-        background-size: contain; /* تناسب الصورة مع العنصر بدون قطع */
-        height: 50vh; /* تقليل ارتفاع الصورة لتصبح مستطيلة */
+        background-size: cover; /* اجعل الصورة تغطي العنصر بالكامل */
         background-position: center; /* تمركز الصورة في الوسط */
+        width: 100%; /* جعل العرض يغطي كامل الشاشة */
+        height: auto; /* جعل الارتفاع تلقائياً بناءً على نسبة العرض */
+        aspect-ratio: 16/9; /* نسبة العرض إلى الارتفاع لتحسين العرض */
+    }
+}
+
+
+.main-image {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    transition: background-image 1s ease-in-out; /* لإضافة تأثير ناعم عند تغيير الصورة */
+}
+
+/* تطبيق صورة مختلفة للأجهزة ذات العرض الأقل من 768 بكسل */
+@media only screen and (max-width: 500px) {
+    .main-image {
+        background-image: url('https://l.top4top.io/p_3120ya5co1.png'); /* صورة الهاتف */
+        height: 50vh; /* اجعل ارتفاع الصورة يغطي الشاشة بالكامل */
+    }
+}
+
+/* تعديل للصورة في نسخة الهاتف */
+@media only screen and (max-width: 768px) {
+    .main-image {
+        background-size: cover;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+        background-position: center;
+    }
+}
+
+/* تعديل للصورة في نسخة الهاتف */
+@media only screen and (max-width: 768px) {
+    .main-image {
+        background-size: contain;
+        height: 200px;
+        background-position: center;
     }
 }
 
@@ -1239,7 +1321,7 @@ footer a:hover {
 }
 
 /* تعديل للصورة في نسخة الهاتف */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 100px) {
     .main-image {
         background-size: cover; /* تأكد من أن الصورة تغطي العنصر */
         background-position: center;
@@ -1268,11 +1350,11 @@ footer a:hover {
 .news-grid {
     display: flex;
     transition: transform 1s ease-in-out;
-    width: 300%; /* عرض الشبكة بنسبة 200% لتستوعب بطاقتين في كل سلايد */
+    width: 200%; /* عرض الشبكة بنسبة 200% لتستوعب بطاقتين في كل سلايد */
 }
 
 .news-card {
-    flex: 0 0 100%; /* عرض البطاقة يكون 50% من السلايدر */
+    flex: 0 0 50%; /* عرض البطاقة يكون 50% من السلايدر */
     box-sizing: border-box;
 }
 
@@ -1551,7 +1633,7 @@ footer a:hover {
             margin-top: 50px;
             opacity: 0;
             transform: translateY(50px);
-            transition: opacity 2s, transform 2s;
+            transition: opacity 5s, transform 5s;
         }
 
 
@@ -1713,7 +1795,7 @@ footer a:hover {
 
         .container {
 
-            max-width: 600px;
+            max-width: 500px;
             margin-top: 50px;
         }
 
@@ -1755,7 +1837,7 @@ footer a:hover {
             margin-top: 50px;
             opacity: 0;
             transform: translateY(50px);
-            transition: opacity 2s, transform 2s;
+            transition: opacity 3s, transform 5s;
         }
 
         
@@ -2101,6 +2183,8 @@ footer a:hover {
                 </label>
 
                 <span class="site-name">كنيسة القديسين بطرس وبولس</span>
+                <img src="123.png">
+
             </div>
             <button class="toggle-btn">☰</button>
 
@@ -2114,7 +2198,7 @@ footer a:hover {
             
 
             .main-image {
-    background-image: url('https://l.top4top.io/p_3120ya5co1.png'); /* صورة الكمبيوتر */
+    background-image: url('https://e.top4top.io/p_3139qy9ou1.jpg'); /* صورة الكمبيوتر */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -2126,15 +2210,36 @@ footer a:hover {
 
 
 /* تطبيق صورة مختلفة للأجهزة ذات العرض الأقل من 768 بكسل */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 500px) {
     .main-image {
-        background-image: url('https://e.top4top.io/p_3139qy9ou1.jpg'); /* صورة الهاتف */
+        background-image: url('https://l.top4top.io/p_3120ya5co1.png'); /* صورة الهاتف */
         background-size: cover; /* اجعل الصورة تغطي العنصر */
         background-position: center; /* تمركز الصورة في الوسط */
         background-attachment: fixed; /* اجعل الصورة ثابتة */
-        height: 100vh; /* اجعل ارتفاع الصورة يغطي الشاشة بالكامل */
+        height: 50vh; /* اجعل ارتفاع الصورة يغطي الشاشة بالكامل */
     }
 }
+
+/* تعديل للصورة في نسخة الهاتف */
+@media only screen and (max-width: 768px) {
+    .main-image {
+        background-size: cover; /* اجعل الصورة تغطي العنصر بالكامل */
+        background-position: center; /* تمركز الصورة في الوسط */
+        width: 100%; /* جعل العرض يغطي كامل الشاشة */
+        height: auto; /* جعل الارتفاع تلقائياً بناءً على نسبة العرض */
+        aspect-ratio: 16/9; /* نسبة العرض إلى الارتفاع لتحسين العرض */
+    }
+}
+
+/* تعديل للصورة في نسخة الهاتف */
+@media only screen and (max-width: 768px) {
+    .main-image {
+        background-size: contain; /* ضبط الصورة لتتناسب مع العنصر */
+        height: 200px; /* تحديد الارتفاع لجعل الصورة مستطيلة */
+        background-position: center;
+    }
+}
+
 
 /* محتويات الصفحة لتغطية الصورة */
 .content-section {
@@ -2387,7 +2492,7 @@ footer a:hover {
 
     <footer>
         <p>&copy;جميع الحقوق محفوظه لكنسه القديسين بطرس و بولس بشبين الكوم</p>
-        <p>تصميم وتطوير بواسطة <a href="https://www.misatechnoly.online" target="_blank">Mina Samuel</a></p>
+        <a href="https://www.misatechnoly.online" target="_blank">MISA TECHNOLGY</a></p><p>تصميم وتطوير بواسطة 
     </footer>
     
     
@@ -2430,6 +2535,28 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const images = [
+            'https://e.top4top.io/p_3139qy9ou1.jpg',
+            'https://l.top4top.io/p_3120ya5co1.png',
+            'https://c.top4top.io/p_3168cd8941.jpg',
+            'https://l.top4top.io/p_3168rruqk1.jpg',
+        ];
+
+        const mainImageDiv = document.querySelector('.main-image');
+        let currentImageIndex = 0;
+
+        // تعيين الصورة الأولى
+        mainImageDiv.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+
+        // تغيير الصور كل 5 ثوان
+        setInterval(() => {
+            currentImageIndex = (currentImageIndex + 1) % images.length; // تغيير الصورة بالتناوب
+            mainImageDiv.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+        }, 5000); // تغيير الصورة كل 5 ثوان
+    });
+</script>
 
 
 
@@ -2441,15 +2568,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const nextBtn = document.querySelector('.next-btn');
     const prevBtn = document.querySelector('.prev-btn');
     let currentIndex = 0;
-    const slideWidth = newsCards[0].offsetWidth * 1; // عرض بطاقتين معًا
-    const totalSlides = Math.ceil(newsCards.length / 0.7); // حساب عدد السلايدات
+    const slideWidth = newsCards[0].offsetWidth * 1.05; // عرض بطاقتين معًا
+    const totalSlides = Math.ceil(newsCards.length / 7); // حساب عدد السلايدات
 
     function updateSlidePosition() {
         newsGrid.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
     }
 
     function nextSlide() {
-        if (currentIndex < totalSlides - 1) {
+        if (currentIndex < totalSlides - 0) {
             currentIndex++;
         } else {
             currentIndex = 0;
@@ -2476,7 +2603,40 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     </script>
+    
     <script>
+
+document.addEventListener('click', function(event) {
+    const sidebar = document.querySelector('.sidebar');
+    const toggleBtn = document.querySelector('.toggle-btn');
+    
+    // التحقق من أن النقرة ليست داخل الشريط الجانبي أو زر التبديل
+    if (!sidebar.contains(event.target) && !toggleBtn.contains(event.target)) {
+        sidebar.classList.remove('show');
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+        const images = [
+            'https://e.top4top.io/p_3139qy9ou1.jpg',
+            'https://l.top4top.io/p_3120ya5co1.png',
+            'https://c.top4top.io/p_3168cd8941.jpg',
+            'https://l.top4top.io/p_3168rruqk1.jpg',
+        ];
+
+        const mainImageDiv = document.querySelector('.church-news-section');
+        let currentImageIndex = 0;
+
+        // تعيين الصورة الأولى
+        mainImageDiv.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+
+        // تغيير الصور كل 5 ثوان
+        setInterval(() => {
+            currentImageIndex = (currentImageIndex + 1) % images.length; // تغيير الصورة بالتناوب
+            mainImageDiv.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+        }, 5000); // تغيير الصورة كل 5 ثوان
+    });
+
         document.addEventListener("DOMContentLoaded", function () {
           fetch("news.json")
             .then(response => response.json())
