@@ -82,8 +82,8 @@
     <div class="container">
         <h2 class="text-center">سجل معنا الان في كنيسه القديسين بطرس و بولس بشبين الكوم</h2>
 
-        <!-- زر تسجيل الدخول باستخدام Google -->
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        
+        
 
         <form id="loginForm" autocomplete="on">
             <div class="form-group">
@@ -189,7 +189,7 @@
             }
 
             if (!phone.match(/^\+20[0-9]{10}$/)) {
-                $('#phoneError').text('يجب إدخال رقم هاتف صحيح يبدأ بـ +20.');
+                $('#phoneError').text('يجب إدخال رقم هاتف صحيح يبدأ بـ +201.');
                 $('input[name="phone"]').addClass('is-invalid');
                 isValid = false;
             }

@@ -68,10 +68,10 @@
         }
 
         .copy-btn {
-    background-color: #4CAF50; /* Green */
+    background-color: #7a0000; 
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 25px 100px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -85,10 +85,41 @@
 .copy-btn:hover {
     background-color: white;
     color: black;
-    border: 2px solid #4CAF50;
+    border: 3px solid #7a0000;
 }
 
+.priest-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
 
+        .priest-info img {
+            width: 370px;
+            height: 370px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .priest-info .text {
+            font-size: 2em;
+        }
+
+        @media(min-width: 768px) {
+            .priest-info {
+                flex-direction: row;
+                text-align: left;
+            }
+
+            .priest-info img {
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+        }
+
+        
         
     </style>
 </head>
@@ -99,6 +130,9 @@
         
     </div>
 
+    <div class="priest-info">
+        <img src="5.jpg" alt="صورة الكاهن">
+        <div class="text">
     <div class="container">
         <h2 class="text-center">القس برناباس نادي</h2>
         <div class="input-group">
@@ -115,7 +149,7 @@
 
             document.execCommand("copy");
 
-            alert("تم النسخ : " + wordInput.value);
+            
         }
     </script>
 </body>
