@@ -1654,13 +1654,32 @@ footer a:hover {
     border-radius: 12px;
 }
 
-.contact-button:hover {
+.enjeel:hover {
     background-color: white;
     color: black;
     border: 2px solid #4CAF50;
 }
 
+.enjeel-button {
+    background-color: #650000; /* Green */
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 18px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 1.5s;
+    cursor: pointer;
+    border-radius: 12px;
+}
 
+.enjeel-button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(110, 0, 0);
+    border: 2px solid #690000;
+}
 
         .about-section.show {
 
@@ -2177,9 +2196,7 @@ footer a:hover {
     <div class="theme-switch-wrapper">
         <input type="checkbox" id="theme-switch" class="theme-switch">
         <label for="theme-switch" class="theme-switch-label">
-            <span class="icon icon-sun"></span>
-            <span class="icon icon-moon"></span>
-              
+            
  
  
                 </label>
@@ -2270,6 +2287,7 @@ footer a:hover {
 
             </div>
             
+<button class="enjeel-button" onclick="location.href='enjeel.html'">الانجيل</button>
 
             <section id="mass-schedule" class="section-transiti">
                 <h2>مواعيد القداسات</h2>
@@ -2408,7 +2426,7 @@ footer a:hover {
                 <a href="index.html">الصفحة الرئيسية</a>
                 <a href="enjeel.html">الإنجيل المقدس</a>
                 <a href="https://orsozox.org/Agpeya/Agpeya-ar.htm">الأجبية</a>
-                <a href="khulagi.html">الخولاجي</a>
+                <a href="khulagi.html">الخلاجي</a>
                 <a href="https://zm-coptic.com/holybible/katamars.php">القطمارس</a>
                
             </div>
@@ -2498,8 +2516,8 @@ footer a:hover {
     </div>
 
     <footer>
-        <p>&copy;جميع الحقوق محفوظه لكنيسة القديسين بطرس و بولس بشبين الكوم</p>
-        <a href="https://www.misatechnoly.online" target="_blank"></a></p></p>
+        &copy;جميع الحقوق محفوظه لكنسه القديسين بطرس و بولس بشبين الكوم</p>
+        <a href="https://www.misatechnoly.online" target="_blank">MISA TECHNOLGY</a>تصميم وتطوير</p></p>
     </footer>
     
     
@@ -2521,7 +2539,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
     document.addEventListener("DOMContentLoaded", function() {
-        const sections = document.querySelectorAll('.about-section, .fathers-section, .donation-section, .contact-section, .mass-schedule');
+        const sections = document.querySelectorAll('.about-section, .fathers-section, .donation-section, .contact-section, .mass-schedule' );
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -2549,6 +2567,12 @@ document.addEventListener('DOMContentLoaded', function() {
             '1.png',
             '9.jpg',
             '10.jpg',
+            '11.jpg',
+            '12.jpg',
+            '13.jpg',
+            '14.jpg',
+            '15.jpg',
+
         ];
 
         const mainImageDiv = document.querySelector('.main-image');
@@ -2568,6 +2592,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     <script>
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const newsGrid = document.querySelector('.news-grid');
@@ -2629,6 +2654,14 @@ document.addEventListener("DOMContentLoaded", function() {
             '1.png',
             '9.jpg',
             '10.jpg',
+            '11.jpg',
+            '12.jpg',
+            '13.jpg',
+            '14.jpg',
+            '15.jpg',
+            
+        
+
         ];
 
         const mainImageDiv = document.querySelector('.church-news-section');
@@ -2827,10 +2860,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 window.location.href = 'login.html';
             });
 
-            // تحميل الجزء العلوي من الصفحة
+            
             $('.about-section').addClass('show');
 
-            // تفعيل وإلغاء تفعيل الوضع الليلي
+           
             $('#theme-switch').change(function() {
                 if ($(this).is(':checked')) {
                     $('body').removeClass('light-mode').addClass('dark-mode');
@@ -2867,10 +2900,6 @@ document.addEventListener("DOMContentLoaded", function() {
 homepageSection.style.display = "block";
 
 
-
-
-
-
 document.getElementById('loginButton').addEventListener('click', function() {
             window.location.href = 'login.html';
         });
@@ -2890,14 +2919,13 @@ document.getElementById('loginButton').addEventListener('click', function() {
 
     </script>
 
-<!-- كود JavaScript لتفعيل تأثيرات التمرير -->
+
 <script>
-    // وظيفة للتحقق من العناصر المرئية في نافذة العرض
+   
     function revealOnScroll() {
         const newsCards = document.querySelectorAll('.news-card');
         const windowHeight = window.innerHeight;
-        const revealPoint = 150; // يمكنك تعديل هذه القيمة للتحكم في توقيت الظهور
-
+        const revealPoint = 150; 
         newsCards.forEach(card => {
             const cardTop = card.getBoundingClientRect().top;
 
