@@ -1095,6 +1095,39 @@ footer a:hover {
     border-radius: 5px;
 }
 
+@media (max-width: 768px) {
+    .news-container { /* اسم القسم اللي يحتوي الأخبار */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .news-item { /* كل عنصر خبر */
+        width: 90%; /* يجعل العنصر يتناسب مع شاشة الموبايل */
+        max-width: 400px; /* يضمن عدم تمدده بشكل زائد */
+        margin-bottom: 15px; /* يضيف مسافة بين الأخبار */
+    }
+
+    .news-item img {
+        width: 100%; /* يجعل الصور تتناسب مع حجم العنصر */
+        height: auto;
+        border-radius: 8px; /* يحسن المظهر بإضافة زوايا دائرية */
+    }
+
+    .news-item h2, .news-item p {
+        text-align: center; /* يجعل العنوان والنص في المنتصف */
+    }
+
+    .news-button { 
+        display: block;
+        width: 100%;
+        max-width: 200px;
+        margin: 10px auto; /* يوسّط الزر أسفل الخبر */
+    }
+}
+
+
 .church-news-section .news-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
