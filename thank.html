@@ -140,29 +140,22 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            let firstName = localStorage.getItem("userFirstName") || "";
-            let lastName = localStorage.getItem("userLastName") || "";
-            let fullName = firstName && lastName ? firstName + " " + lastName : "";
-
-            let storedCode = localStorage.getItem("studentCode") || "";
-
-            document.getElementById("studentName").value = fullName;
-            document.getElementById("studentCode").value = storedCode;
+            let storedName = localStorage.getItem("userFirstName") + " " + localStorage.getItem("userLastName");
+            let storedCode = localStorage.getItem("studentCode");
+            document.getElementById("studentName").value = storedName || "";
+            document.getElementById("studentCode").value = storedCode || "";
         });
 
         function checkStudent() {
             let name = document.getElementById("studentName").value.trim();
             let code = document.getElementById("studentCode").value.trim();
             let year = localStorage.getItem("studentYear");
-
             if (!name || !code) {
                 document.getElementById("errorMessage").textContent = "⚠️ يجب إدخال الاسم والكود!";
                 return;
             }
-
             localStorage.setItem("studentName", name);
             localStorage.setItem("studentCode", code);
-
             let redirectPage = "";
             switch(year) {
                 case "أولى إعدادي": redirectPage = "first_prep.html"; break;
@@ -170,7 +163,6 @@
                 case "ثالثة إعدادي": redirectPage = "third_prep.html"; break;
                 default: redirectPage = "index.html";
             }
-
             window.location.href = redirectPage;
         }
     </script>
