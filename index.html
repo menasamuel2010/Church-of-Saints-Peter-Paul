@@ -106,7 +106,7 @@
         }
 
         @media (max-width: 768px) {
-    .church-news-section .news-grid {
+    .church-news-section .news {
         grid-template-columns: 1fr; /* بطاقة واحدة لكل صف */
         gap: 20px;
     }
@@ -264,7 +264,7 @@
     z-index: 2;
 }
 
-.news-grid {
+.news {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
@@ -1095,7 +1095,7 @@ footer a:hover {
     border-radius: 5px;
 }
 
-.church-news-section .news-grid {
+.church-news-section .news {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
@@ -1373,7 +1373,7 @@ footer a:hover {
     }
 }
 
-.news-grid {
+.news {
     display: flex;
     transition: transform 1s ease-in-out;
     width: 200%; /* عرض الشبكة بنسبة 200% لتستوعب بطاقتين في كل سلايد */
@@ -2380,10 +2380,7 @@ footer a:hover {
                         <div class="news-item">
 
                         </div>
-                        <div class="news-grid">
-                            
-
-                          
+                        <div class="news">
 
 
                             <div class="news-card">
@@ -2439,7 +2436,7 @@ footer a:hover {
       fetch("news.json") 
         .then(response => response.json())
         .then(data => {
-          const newsGrid = document.querySelector('.news-grid');
+          const newsGrid = document.querySelector('.news');
           
           data.forEach(news => {
             const newsCard = document.createElement('div');
@@ -2643,7 +2640,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    const newsGrid = document.querySelector('.news-grid');
+    const newsGrid = document.querySelector('.news');
     const newsCards = document.querySelectorAll('.news-card');
     const nextBtn = document.querySelector('.next-btn');
     const prevBtn = document.querySelector('.prev-btn');
@@ -2729,7 +2726,7 @@ document.addEventListener("DOMContentLoaded", function() {
           fetch("news.json")
             .then(response => response.json())
             .then(data => {
-              const newsGrid = document.querySelector('.news-grid');
+              const newsGrid = document.querySelector('.news');
               
               data.forEach(news => {
                 const newsCard = document.createElement('div');
