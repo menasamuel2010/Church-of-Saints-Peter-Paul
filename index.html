@@ -265,11 +265,11 @@
 }
 
 .news {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
+
 
 .news-card {
     background-color: rgba(255, 255, 255, 0.9);
@@ -1389,6 +1389,12 @@ footer a:hover {
     overflow: hidden;
 }
 
+.slide-btn {
+  z-index: 1000;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 
 .slide-btn {
     position: absolute;
@@ -2107,6 +2113,70 @@ footer a:hover {
     text-decoration: underline;
 }
 
+#preloader {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 57.6px;
+  height: 57.6px;
+  animation: spinner-y0fdc1 2.8s infinite ease;
+  transform-style: preserve-3d;
+}
+
+.spinner > div {
+  background-color: rgba(92,0,0,0.2);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  border: 2.9px solid #5c0000;
+}
+
+.spinner div:nth-of-type(1) {
+  transform: translateZ(-28.8px) rotateY(180deg);
+}
+.spinner div:nth-of-type(2) {
+  transform: rotateY(-270deg) translateX(50%);
+  transform-origin: top right;
+}
+.spinner div:nth-of-type(3) {
+  transform: rotateY(270deg) translateX(-50%);
+  transform-origin: center left;
+}
+.spinner div:nth-of-type(4) {
+  transform: rotateX(90deg) translateY(-50%);
+  transform-origin: top center;
+}
+.spinner div:nth-of-type(5) {
+  transform: rotateX(-90deg) translateY(50%);
+  transform-origin: bottom center;
+}
+.spinner div:nth-of-type(6) {
+  transform: translateZ(28.8px);
+}
+
+@keyframes spinner-y0fdc1 {
+  0% {
+    transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+  }
+  50% {
+    transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+  }
+  100% {
+    transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+  }
+}
+
+
     </style>
     </head>
     <body>
@@ -2197,7 +2267,12 @@ footer a:hover {
 </head>
 <body>
 
-
+    <div id="preloader">
+        <div class="spinner">
+          <div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+      </div>
+      
     
         <div id="loginSection" class="container">
            
@@ -2373,7 +2448,52 @@ footer a:hover {
               
 
               
-              
+              <section id="church-news" class="church-news-section">
+                <div class="container">
+                    <h2 class="section-title">أخبار الكنيسة</h2>
+                    <div class="news-slider">
+                        <div class="news-item">
+
+                        </div>
+                        <div class="news">
+
+
+                            <div class="news-card">
+                                <div class="news-image">
+                                    <img src="10.jpg" alt="عنوان الخبر الأول">
+                                </div>
+                                <div class="news-content">
+                                    <h3 class="news-title">مشاركه الكنيسه في مهرجان الكرازه 2024</h3>
+                                    <p class="news-excerpt">
+                                        مشاركه الكنيسه في فرع المسرحيه ...
+                                    </p>
+                                    <button class="read-more-btn" onclick="showModal('مشاركه الكنيسه في فرع المسرحيه اخراج عماد فاروق و اخراج نبيل عبد الساتر و تاليف نفين ظريف', '.')">اقرأ المزيد</button>
+                                </div>
+                            </div>
+                            
+
+
+                            <div class="news-card">
+                                <div class="news-image">
+                                    <img src="9.jpg" alt="">
+                                </div>
+                                <div class="news-content">
+                                    <h3 class="news-title">مشاركه الكنيسه في مهرجان الكرازه 2024</h3>
+                                    <p class="news-excerpt">
+                                        مشاركه الكنيسه في فرع الكورال ...
+                                    </p>
+                                    <button class="read-more-btn" onclick="showModal('مشاركه الكنيسه في فرع الكورال تحت اشراف اخ مايكل عادل و تاسوني هبه زاهر و تاسوني ليليان مجدي')">اقرأ المزيد</button>
+                                </div>
+                            </div>
+                           
+                            
+                            </div>
+                        </div>
+                        <button class="slide-btn prev-btn">&#10094;</button>
+                        <button class="slide-btn next-btn">&#10095;</button>
+                    </div>
+                </div>
+            </section>
             
     </div>
 </section>
@@ -2537,6 +2657,15 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
+        
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      document.getElementById('preloader').style.display = 'none';
+    }, 6000); // 6 ثواني
+  });
+
+
+
     document.addEventListener("DOMContentLoaded", function() {
         const sections = document.querySelectorAll('.about-section, .fathers-section, .donation-section, .contact-section, .mass-schedule' );
 
@@ -2600,15 +2729,16 @@ document.addEventListener("DOMContentLoaded", function() {
     const nextBtn = document.querySelector('.next-btn');
     const prevBtn = document.querySelector('.prev-btn');
     let currentIndex = 0;
-    const slideWidth = newsCards[0].offsetWidth * 1.05; 
-    const totalSlides = Math.ceil(newsCards.length / 7); 
+    const slideWidth = newsCards[0].offsetWidth * 1.05;
+
+    const totalSlides = newsCards.length; // ✅ التعديل هنا
 
     function updateSlidePosition() {
         newsGrid.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
     }
 
     function nextSlide() {
-        if (currentIndex < totalSlides - 0) {
+        if (currentIndex < totalSlides - 1) {
             currentIndex++;
         } else {
             currentIndex = 0;
@@ -2630,6 +2760,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     setInterval(nextSlide, 5000); 
 });
+
 
 
 
