@@ -15,6 +15,8 @@
         <div class="spinner"></div>
     </div>
 
+    <div class="custom-cursor"></div>
+
     <header class="top-bar" id="topBar">
         <div class="container">
             <div class="top-bar-content">
@@ -22,7 +24,7 @@
                     <div class="site-name">كنيسة القديسين بطرس وبولس</div>
                     <div class="welcome-section">
                         <div id="welcomeMessage" class="welcome-message" style="display: none;">
-                            مرحباً، <span id="userName"></span>!
+                            ازيك يا <span id="userName"></span>
                         </div>
                         <button id="loginButton" class="register-button">تسجيل الدخول</button>
                         <div class="social-media">
@@ -79,7 +81,7 @@
     <section class="about-section section-transiti" id="aboutSection" data-aos="fade-up">
         <div class="container">
             <h2 class="section-title">عن الكنيسة</h2>
-            <div class="about-content">
+            <div class="about-content" data-tilt data-tilt-max="8" data-tilt-speed="300" data-tilt-perspective="800">
                 <img src="3.jpg" alt="صورة الكنيسة" class="church-image" loading="lazy">
                 <div class="text">
                     <p>تعد كنيسة القديسين بطرس وبولس هي الكنيسة الثالثة بعد كنستي الشهيد مار جرجس والأخرى السيدة العذراء مريم التابعين لايبارشية كرسي المنوفية و كانت تتبع طائفة الأقباط الكاثوليك و في عام 2005 تم شراء الكنيسة و تدشينها بيد صاحب النيافة الحبر الجليل الأنبا بنيامين وتعرضت الكنيسة بحريق هائل يوم الأربعاء الموافق تسعة من شهر سبتمبر عام ألفين و تسعه 2009/09/9 الساعة الثالثة ظهرا كان هناك فى هذا اليوم قداس انتهى الساعة الحادية عشر صباحا قد زعم البعض انه ماس كهربى او شمعة هى التى سببت هذا الحريق الهائل الذى سبب خسائر فادحة و قدرت هذه الخسائر بمائة ألف جنيه قد أثبت أنه ليس ماس كهربى ولا يوجد ايضا اى شمعة يوم الاربعاء يوجد الشمع فقط يومي الأحد والجمعة فالحريق لم يتم بشمعة أو ماس كهربى و تم تجديد الكنيسة بالكامل والان يتم بناء كنيسة أخرى تابعة لهذه الكنيسة </p>
@@ -143,7 +145,7 @@
             <h2 class="section-title">أخبار الكنيسة</h2>
             <div class="news-slider">
                 <div class="news">
-                    <div class="news-card">
+                    <div class="news-card" data-tilt data-tilt-max="8" data-tilt-speed="300" data-tilt-perspective="800">
                         <div class="news-image">
                             <img src="10.jpg" alt="مهرجان الكرازة 2024" loading="lazy">
                         </div>
@@ -153,7 +155,7 @@
                             <button class="read-more-btn" onclick="showModal('مشاركة الكنيسة في فرع المسرحية', 'إخراج عماد فاروق ونبيل عبد الساتر، تأليف نفين ظريف.')">اقرأ المزيد</button>
                         </div>
                     </div>
-                    <div class="news-card">
+                    <div class="news-card" data-tilt data-tilt-max="8" data-tilt-speed="300" data-tilt-perspective="800">
                         <div class="news-image">
                             <img src="9.jpg" alt="مهرجان الكرازة 2024" loading="lazy">
                         </div>
@@ -239,10 +241,98 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Initialize AOS
             AOS.init({ duration: 1000, once: true });
+
+            // Initialize Vanilla Tilt
+            VanillaTilt.init(document.querySelector('.about-content'), {
+                max: 80000,
+                speed: 300000,
+                perspective: 800000
+            });
+            VanillaTilt.init(document.querySelector('.father'), {
+                max: 8,
+                speed: 30,
+                perspective: 80
+            });
+            VanillaTilt.init(document.querySelector('.father'), {
+                max: 8,
+                speed: 30,
+                perspective: 80
+            });
+            VanillaTilt.init(document.querySelector('.father'), {
+                max: 8,
+                speed: 30,
+                perspective: 80
+            });
+            VanillaTilt.init(document.querySelectorAll('.news-card'), {
+                max: 800,
+                speed: 30000,
+                perspective: 80000
+            });
+            VanillaTilt.init(document.querySelector('.table-responsive'), {
+                max: 8,
+                speed: 80,
+            });
+
+            
+// منع النقر بزر الماوس الأيمن
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+
+// منع نسخ النصوص
+document.addEventListener('copy', function(e) {
+    e.preventDefault();
+    alert('نسخ النصوص غير مسموح به في هذا الموقع');
+});
+
+// منع اختيار النصوص (لكن هذا قد يؤثر على تجربة المستخدم)
+document.addEventListener('selectstart', function(e) {
+    e.preventDefault();
+});
+
+// لمنع سحب الصور (اختياري)
+document.addEventListener('dragstart', function(e) {
+    if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+    }
+});
+
+
+            // Custom Cursor (Desktop Only)
+            if (window.innerWidth >= 768) {
+                const cursor = document.querySelector('.custom-cursor');
+                document.addEventListener('mousemove', (e) => {
+                    cursor.style.left = `${e.clientX}px`;
+                    cursor.style.top = `${e.clientY}px`;
+                });
+
+                document.querySelectorAll('a, button, .father, .read-more-btn, .contact-button, .toggle-btn, .theme-switch-label, .sidebar-link, .social-media img').forEach(el => {
+                    el.addEventListener('mouseenter', () => cursor.classList.add('hovered'));
+                    el.addEventListener('mouseleave', () => cursor.classList.remove('hovered'));
+                });
+
+                // Scroll Interaction for Cursor
+                let lastScrollTop = 0;
+                window.addEventListener('scroll', () => {
+                    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    if (scrollTop > lastScrollTop) {
+                        cursor.classList.add('scrolling-down');
+                        cursor.classList.remove('scrolling-up');
+                    } else {
+                        cursor.classList.add('scrolling-up');
+                        cursor.classList.remove('scrolling-down');
+                    }
+                    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+                    setTimeout(() => {
+                        cursor.classList.remove('scrolling-up', 'scrolling-down');
+                    }, 300);
+                });
+            }
 
             // Preloader
             window.addEventListener('load', function () {
@@ -273,16 +363,16 @@
             const sidebarOverlay = document.querySelector('.sidebar-overlay');
             
             function toggleSidebar() {
-    sidebar.classList.toggle('show');
-    sidebarOverlay.classList.toggle('active');
-    
-    // Disable scroll when sidebar is open
-    if (sidebar.classList.contains('show')) {
-        document.body.style.overflow = 'hidden';
-    } else {
-        document.body.style.overflow = '';
-    }
-}
+                sidebar.classList.toggle('show');
+                sidebarOverlay.classList.toggle('active');
+                
+                // Disable scroll when sidebar is open
+                if (sidebar.classList.contains('show')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                }
+            }
             
             toggleBtn.addEventListener('click', toggleSidebar);
             sidebarCloseBtn.addEventListener('click', toggleSidebar);
@@ -345,44 +435,55 @@
             }, 5000);
 
             // Scroll Behavior for All Devices
-            let lastScrollTop = 0;
-            const topBar = document.getElementById('topBar');
-            const mainImage = document.querySelector('.main-image');
-            const mainImageHeight = mainImage.offsetHeight;
+            // Scroll Behavior for All Devices
+let lastScrollTop = 0;
+const topBar = document.getElementById('topBar');
+const mainImage = document.querySelector('.main-image');
+const mainImageHeight = mainImage.offsetHeight;
 
-            function handleScrollEvent() {
-                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                
-                if (window.innerWidth <= 768) {
-                    // Mobile behavior
-                    if (scrollTop > lastScrollTop && scrollTop > 50) {
-                        // Scrolling down
-                        topBar.classList.add('hidden');
-                    } else {
-                        // Scrolling up
-                        topBar.classList.remove('hidden');
-                    }
-                } else {
-                    // Desktop behavior
-                    if (scrollTop > mainImageHeight) {
-                        topBar.classList.add('scrolled');
-                        
-                        if (scrollTop > lastScrollTop && scrollTop > mainImageHeight + 100) {
-                            // Scrolling down after main image
-                            topBar.classList.add('hidden');
-                        } else {
-                            // Scrolling up
-                            topBar.classList.remove('hidden');
-                        }
-                    } else {
-                        // At top of page
-                        topBar.classList.remove('scrolled');
-                        topBar.classList.remove('hidden');
-                    }
-                }
-                
-                lastScrollTop = scrollTop;
+function handleScrollEvent() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Check if we're on mobile
+    if (window.innerWidth <= 768) {
+        // Mobile behavior
+        if (scrollTop <= mainImageHeight) {
+            // When in main image area
+            topBar.classList.add('transparent');
+            topBar.classList.remove('scrolled', 'hidden');
+        } else {
+            // After main image
+            topBar.classList.remove('transparent');
+            topBar.classList.add('scrolled');
+            
+            if (scrollTop > lastScrollTop) {
+                // Scrolling down
+                topBar.classList.add('hidden');
+            } else {
+                // Scrolling up
+                topBar.classList.remove('hidden');
             }
+        }
+    } else {
+        // Desktop behavior
+        if (scrollTop > mainImageHeight) {
+            topBar.classList.add('scrolled');
+            
+            if (scrollTop > lastScrollTop && scrollTop > mainImageHeight + 100) {
+                // Scrolling down after main image
+                topBar.classList.add('hidden');
+            } else {
+                // Scrolling up
+                topBar.classList.remove('hidden');
+            }
+        } else {
+            // At top of page
+            topBar.classList.remove('scrolled', 'hidden');
+        }
+    }
+    
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+}
 
             // Use throttling for better performance
             let scrollTimeout;
@@ -579,28 +680,28 @@
             }
 
             document.addEventListener('click', function(event) {
-    const sidebar = document.querySelector('.sidebar');
-    const toggleBtn = document.querySelector('.toggle-btn');
-    const sidebarOverlay = document.querySelector('.sidebar-overlay');
-    
-    if (sidebar.classList.contains('show') && 
-        !sidebar.contains(event.target) && 
-        !toggleBtn.contains(event.target)) {
-        
-        // إضافة تأثير انتقالي قبل الإغلاق
-        sidebar.style.transition = 'transform 0.4s cubic-bezier(0.77, 0, 0.175, 1)';
-        sidebarOverlay.style.transition = 'opacity 0.4s ease';
-        
-        // إغلاق الشريط
-        sidebar.classList.remove('show');
-        sidebarOverlay.classList.remove('active');
-        
-        // إعادة ضبط التمرير بعد انتهاء الانتقال
-        setTimeout(() => {
-            document.body.style.overflow = '';
-        }, 400);
-    }
-});
+                const sidebar = document.querySelector('.sidebar');
+                const toggleBtn = document.querySelector('.toggle-btn');
+                const sidebarOverlay = document.querySelector('.sidebar-overlay');
+                
+                if (sidebar.classList.contains('show') && 
+                    !sidebar.contains(event.target) && 
+                    !toggleBtn.contains(event.target)) {
+                    
+                    // إضافة تأثير انتقالي قبل الإغلاق
+                    sidebar.style.transition = 'transform 0.4s cubic-bezier(0.77, 0, 0.175, 1)';
+                    sidebarOverlay.style.transition = 'opacity 0.4s ease';
+                    
+                    // إغلاق الشريط
+                    sidebar.classList.remove('show');
+                    sidebarOverlay.classList.remove('active');
+                    
+                    // إعادة ضبط التمرير بعد انتهاء الانتقال
+                    setTimeout(() => {
+                        document.body.style.overflow = '';
+                    }, 400);
+                }
+            });
 
             // Add smooth scroll for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -649,5 +750,6 @@
             }
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93a9db35bf691379',t:'MTc0NjM4MTE5Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93a9db35bf691379',t:'MTc0NjM4MTE5Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93b703ad1a7353cf',t:'MTc0NjUxOTE2NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
 </html>
